@@ -11,7 +11,8 @@ const appRoutesAbsolutePath = [
     '#',
     '#services',
     '#projects',
-    '#about-us'
+    '#about-us',
+    '#mvv-company',
 ]
 
 export {

@@ -5,10 +5,11 @@
  * APP_ROUTES_NAME - Title of the Header links.
  **/
 export enum APP_ROUTES_NAME {
-    HOME      = 'HOME',
-    SERVICES  = 'SERVIÇOS',
-    PROJECTS  = 'PROJETOS',
-    ABOUT     = 'SOBRE NÓS'
+    HOME      = 'Home',
+    SERVICES  = 'Serviços',
+    PROJECTS  = 'Projetos',
+    ABOUT     = 'Sobre Nós',
+    MISSION   = 'Missão'
 }
 
 /* -------------------------------------------------- */
