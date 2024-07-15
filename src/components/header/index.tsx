@@ -89,7 +89,7 @@ export const Header = () => {
     return (
         <header>
             <div className='flex-center gap-2 select-none pointer-events-none'>
-                <span className='w-6 h-6 bg-[url("favicon.ico")] bg-no-repeat bg-center bg-cover md:mb-1 hidden sm:inline-block' />
+                <span className='w-6 h-6 bg-[url("favicon.ico")] bg-no-repeat bg-center bg-cover hidden sm:inline-block' />
                 <p className={`${Pacifico.className} text-zinnia text-2xl sm:hidden md:inline-block`}>
                     PeachCode
                 </p>
