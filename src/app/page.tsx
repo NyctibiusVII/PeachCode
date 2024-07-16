@@ -68,3 +68,12 @@ export default function Home() {
         </main>
     )
 }
+
+const Heading2Description = ({ title, description }: { title: string, description: string }) => {
+    return (
+        <div className='flex flex-col items-center gap-2 lg:gap-4'>
+            <h2 className='uppercase text-center text-2xl md:text-3xl lg:text-4xl'>{title}</h2>
+            <p className='text-glacier-white/80 text-center text-wrap leading-5 md:text-xl md:leading-6'>{description}</p>
+        </div>
+    )
+}
