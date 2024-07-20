@@ -4,12 +4,13 @@
 
 @layer base {
     body { @apply w-full h-screen bg-dark-cyan text-glacier-white antialiased selection:bg-clover-green/75 selection:text-white flex flex-col items-center justify-start }
-    header { @apply flex items-center justify-between }
-    header, footer > div { @apply w-full p-4 md:px-[7.5rem] }
-    header, main, footer > div { @apply max-w-app-content }
-    main { @apply w-full flex flex-col items-center gap-[5.625rem] xl:gap-40 px-4 xs:px-8 md:px-[7.5rem] py-12 md:py-20 lg:py-24 xl:py-32 }
 
-    p, span, input { @apply truncate }
+    header, main, footer { @apply w-full }
+    * > .content { @apply w-full max-w-app-content mx-auto px-4 md:px-[7.5rem] }
+
+    header { @apply py-2 }
+    main { @apply flex flex-col /*py-12 md:py-20 lg:py-24 xl:py-32 | gap-20 md:gap-32 xl:gap-40*/ }
+    footer { @apply bg-white/[0.01] border-t border-white/5 }
 
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
@@ -30,6 +31,7 @@
 
 @layer utilities {
     .debug * { @apply border border-swift-red }
+    .deep-debug * { @apply bg-swift-red/15 border border-swift-red }
     .mark-text { @apply text-paw-paw }
     .flex-center { @apply flex items-center justify-center }
     .social-link-button { @apply w-12 h-12 bg-no-repeat bg-center bg-white/5 border-2 border-transparent hover:border-glacier-white rounded-full transition-colors }
