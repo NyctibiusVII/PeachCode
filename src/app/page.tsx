@@ -13,6 +13,39 @@ export default function Home() {
             <Header />
 
             <main>
+                <section id='about-us' className='bg-dark-night'>
+                    <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
+                        <Heading2Description
+                            title='Sobre Nós'
+                            description='Somos uma equipe apaixonada e dedicada de profissionais de tecnologia, impulsionados pela visão de transformar o cenário empresarial por meio de soluções inovadoras e inteligentes. Como consultoria em tecnologia de informação, nossa missão é fornecer resultados excepcionais, aproveitando ao máximo nosso conhecimento especializado em desenvolvimento.'
+                        />
+
+                        <div className='w-fit h-fit mx-auto bg-gradient-to-br from-transparent from-60% to-zinnia/50 p-1 rounded-lg flex items-center'>
+                            <div className='bg-dark-night p-6 rounded-md flex flex-col gap-4 sm:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 items-center sm:flex-row md:flex-col lg:flex-row'>
+                                <Image
+                                    className='w-40 h-auto sm:w-32 md:w-48 lg:w-60 xl:w-72'
+                                    src='/assets/icons/logo/peach-alter.svg'
+                                    width={16}
+                                    height={16}
+                                    priority={false}
+                                    alt='Ícone da PeachCode company.'
+                                />
+
+                                <div className='sm:max-w-96 md:max-w-full lg:max-w-[30rem] xl:max-w-[35rem] 2xl:max-w-[40rem] flex flex-col gap-2 md:gap-4 text-glacier-white/80 leading-5 md:text-xl md:leading-6'>
+                                    <h3 className='text-glacier-white text-xl md:text-2xl'>Nossa abordagem para criação de soluções</h3>
+                                    <p className='md:-mt-3'>Acreditamos que cada desafio tecnológico oferece uma oportunidade única de crescimento, envolvendo uma combinação de:</p>
+                                    <ul>
+                                        <li className='text-zinnia my-0.5'>Criatividade.</li>
+                                        <li className='text-zinnia my-0.5'>Experiência técnica.</li>
+                                        <li className='my-0.5'><span className='text-zinnia'>Compreensão profunda</span> da demanda de nossos clientes e confiança para suas necessidades tecnológicas.</li>
+                                    </ul>
+                                    <p>Trabalhamos lado a lado com as empresas para identificar soluções personalizadas que abordem suas necessidades específicas e ofereçam resultados tangíveis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
                 <section id='mvv-company'>
                     <div className='content py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8 md:gap-y-16 xl:gap-8'>
                         <div className='w-full max-w-80 h-fit md:max-w-[22rem] lg:max-w-96 m-auto bg-[url("/assets/icons/logo/peach-pattern.svg")] bg-dark-night bg-[top_left_35%] border-2 border-azure rounded-2xl overflow-hidden'>
