@@ -1,6 +1,11 @@
 import { Header } from '@components/header'
 import { Footer } from '@components/footer'
 
+import ProjectImage1 from '@../public/assets/images/projects/app-1.png'
+import ProjectImage2 from '@../public/assets/images/projects/app-2.png'
+import ProjectImage3 from '@../public/assets/images/projects/app-3.png'
+import ProjectImage4 from '@../public/assets/images/projects/app-4.png'
+import ProjectImage5 from '@../public/assets/images/projects/app-5.png'
 import GenericImage1 from '@../public/assets/images/generic-image-1.png'
 import GenericImage2 from '@../public/assets/images/generic-image-2.png'
 import GenericImage3 from '@../public/assets/images/generic-image-3.png'
@@ -8,11 +13,60 @@ import GenericImage3 from '@../public/assets/images/generic-image-3.png'
 import Image from 'next/image'
 
 export default function Home() {
+    const projectImages = [
+        {
+            src: ProjectImage1,
+            alt: 'Imagem do projeto Biocube, feito pela PeachCode.'
+        },
+        {
+            src: ProjectImage2,
+            alt: 'Imagem do projeto Boletim, feito pela PeachCode.'
+        },
+        {
+            src: ProjectImage3,
+            alt: 'Imagem do projeto Occurrences, feito pela PeachCode.'
+        },
+        {
+            src: ProjectImage4,
+            alt: 'Imagem do projeto Atenas Ceap, feito pela PeachCode.'
+        },
+        {
+            src: ProjectImage5,
+            alt: 'Imagem do projeto Finances, feito pela PeachCode.'
+        }
+    ]
+
     return (
         <>
             <Header />
 
             <main>
+                <section id='projects' className='bg-dark-night'>
+                    <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
+                        <Heading2Description
+                            title='Projetos Concluídos'
+                            description='Explore nossa seleção de Projetos Concluídos na Peach Code! Aqui, demonstramos nossa dedicação à inovação tecnológica. Cada projeto é uma história de sucesso que reflete nosso compromisso com o progresso. Descubra como transformamos ideias em realidade.'
+                        />
+
+                        <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-4 sm:gap-y-9 md:gap-y-6 lg:gap-y-12 xl:gap-y-8'>
+                            { projectImages.map((project, index) =>
+                                <Image
+                                    key={index}
+                                    className='w-[288px] h-[140px] md:w-80 md:h-40 hover:scale-105 sm:hover:scale-110 mx-auto border-2 border-azure rounded-2xl transition-transform'
+                                    src={project.src}
+                                    width={320}
+                                    height={160}
+                                    placeholder='blur'
+                                    priority={false}
+                                    alt={project.alt}
+                                />
+                            ) }
+
+                            <span className='hidden sm:block md:hidden lg:block w-[288px] h-[140px] md:w-80 md:h-40 bg-[url("/assets/icons/logo/peach-pattern.svg")] bg-[top_left_35%] mx-auto border-2 border-azure rounded-2xl transition-transform' />
+                        </div>
+                    </div>
+                </section>
+
                 <section id='about-us' className='bg-dark-night'>
                     <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
                         <Heading2Description
@@ -20,8 +74,8 @@ export default function Home() {
                             description='Somos uma equipe apaixonada e dedicada de profissionais de tecnologia, impulsionados pela visão de transformar o cenário empresarial por meio de soluções inovadoras e inteligentes. Como consultoria em tecnologia de informação, nossa missão é fornecer resultados excepcionais, aproveitando ao máximo nosso conhecimento especializado em desenvolvimento.'
                         />
 
-                        <div className='w-fit h-fit mx-auto bg-gradient-to-br from-transparent from-60% to-zinnia/50 p-1 rounded-lg flex items-center'>
-                            <div className='bg-dark-night p-6 rounded-md flex flex-col gap-4 sm:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 items-center sm:flex-row md:flex-col lg:flex-row'>
+                        <div className='w-fit h-fit mx-auto bg-gradient-to-br from-transparent from-60% to-zinnia/50 p-1 rounded-2xl flex items-center'>
+                            <div className='bg-dark-night p-6 rounded-xl flex flex-col gap-4 sm:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 items-center sm:flex-row md:flex-col lg:flex-row'>
                                 <Image
                                     className='w-40 h-auto sm:w-32 md:w-48 lg:w-60 xl:w-72'
                                     src='/assets/icons/logo/peach-alter.svg'
@@ -45,7 +99,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                
+
                 <section id='mvv-company'>
                     <div className='content py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8 md:gap-y-16 xl:gap-8'>
                         <div className='w-full max-w-80 h-fit md:max-w-[22rem] lg:max-w-96 m-auto bg-[url("/assets/icons/logo/peach-pattern.svg")] bg-dark-night bg-[top_left_35%] border-2 border-azure rounded-2xl overflow-hidden'>
