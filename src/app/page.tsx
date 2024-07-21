@@ -56,7 +56,7 @@ export default function Home() {
                                 height={222}
                                 placeholder='blur'
                                 priority={false}
-                                alt='Image ilustrativa para descrever nossa Missão como empresa.'
+                                alt='Imagem ilustrativa para descrever nossa Missão como empresa.'
                             />
 
                             <div className='-mt-6 xl:-mt-8 px-4 pb-2 flex flex-col items-center justify-end gap-2'>
@@ -75,7 +75,7 @@ export default function Home() {
                                 height={222}
                                 placeholder='blur'
                                 priority={false}
-                                alt='Image ilustrativa para descrever nossa Visão como empresa.'
+                                alt='Imagem ilustrativa para descrever nossa Visão como empresa.'
                             />
 
                             <div className='-mt-6 xl:-mt-8 px-4 pb-2 flex flex-col items-center justify-end gap-2'>
@@ -94,7 +94,7 @@ export default function Home() {
                                 height={222}
                                 placeholder='blur'
                                 priority={false}
-                                alt='Image ilustrativa para descrever nossa Valores como empresa.'
+                                alt='Imagem ilustrativa para descrever nossa Valores como empresa.'
                             />
 
                             <div className='-mt-6 xl:-mt-8 px-4 pb-2 flex flex-col items-center justify-end gap-2'>
