@@ -15,6 +15,78 @@ export default function Home() {
             <Header />
 
             <main>
+                <section className='bg-[linear-gradient(175deg,var(--tw-gradient-stops))] from-50% via-50% from-dark-cyan via-paw-paw to-zinnia'>
+                    <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
+                        <Heading2Description
+                            title='O que nós fazemos'
+                            description='A Peach Code é uma renomada empresa de consultoria em tecnologia de informação, especializada em proporcionar soluções inovadoras e eficientes para as necessidades tecnológicas atuais. Com um histórico sólido e uma equipe de profissionais altamente qualificados, estamos comprometidos em elevar os padrões da indústria por meio de nossos serviços de desenvolvimento.'
+                        />
+
+                        <div className='w-fit h-fit mx-auto bg-gradient-to-tl from-transparent from-60% to-paw-paw/50 p-1 rounded-2xl md:rounded-[20px] flex items-center'>
+                            <div className='bg-dark-cyan p-6 rounded-xl md:rounded-2xl flex flex-col gap-4 sm:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 items-center sm:flex-row md:flex-col lg:flex-row'>
+                                <div className='sm:max-w-96 md:max-w-full lg:max-w-[30rem] xl:max-w-[35rem] 2xl:max-w-[40rem] flex flex-col gap-2 md:gap-4 text-glacier-white/80 leading-5 md:text-xl md:leading-6'>
+                                    <h3 className='text-glacier-white text-xl md:text-2xl'>Porque escolher a Peach Code?</h3>
+                                    <p className='md:-mt-3'>Possuímos TRÊS pilares principais para o nosso trabalho:</p>
+                                    <ul>
+                                        <li className='my-0.5'><MarkText color='light-orange'>Foco no Cliente:</MarkText> Colocamos nossos clientes em primeiro lugar, adaptando nossos serviços para atender às suas necessidades exclusivas e objetivos de negócios.</li>
+                                        <li className='my-0.5'><MarkText color='light-orange'>Inovação Constante:</MarkText> Mantemo-nos atualizados com as últimas tendências tecnológicas e metodologias de desenvolvimento, garantindo soluções inovadoras e relevantes.</li>
+                                        <li className='my-0.5'><MarkText color='light-orange'>Parceria Estratégica:</MarkText> Acreditamos em estabelecer parcerias de longo prazo, auxiliando nossos clientes em sua jornada tecnológica em evolução.</li>
+                                    </ul>
+                                    <p className='italic text-glacier-white/50 text-sm lg:text-base'>Acreditamos que a tecnologia é a chave para transformar desafios em oportunidades.</p>
+                                </div>
+
+                                <Image
+                                    className='w-40 h-auto sm:w-32 md:w-48 lg:w-60 xl:w-72'
+                                    src='/favicon.svg'
+                                    width={16}
+                                    height={16}
+                                    priority={false}
+                                    alt='Ícone da PeachCode company.'
+                                />
+                            </div>
+                        </div>
+
+                        <div className='grid grid-cols-2 lg:grid-cols-4 sm:gap-2 xl:gap-8 2xl:gap-12'>
+                            <div className='bg-dark-cyan p-2 xs:p-4 rounded-tl-xl sm:rounded-xl md:rounded-2xl'>
+                                <div className='flex items-center sm:gap-1 lg:gap-2'>
+                                    <span className='w-8 h-8 bg-[url("/assets/icons/code-alt.svg")] bg-no-repeat bg-center bg-[length:70%] sm:bg-[length:80%] lg:bg-[length:100%]' />
+
+                                    <h3 className='text-2xl lg:text-3xl'>14161</h3>
+                                </div>
+
+                                <p className='leading-5 sm:text-lg lg:text-xl mt-2 lg:mt-4'>Nossas horas de desenvolvimento</p>
+                            </div>
+                            <div className='bg-dark-cyan border-l-2 border-dark-night sm:border-none p-2 xs:p-4 rounded-tr-xl sm:rounded-xl md:rounded-2xl'>
+                                <div className='flex items-center sm:gap-1 lg:gap-2'>
+                                    <span className='w-8 h-8 bg-[url("/assets/icons/smile.svg")] bg-no-repeat bg-center bg-[length:70%] sm:bg-[length:80%] lg:bg-[length:100%]' />
+
+                                    <h3 className='text-2xl lg:text-3xl'>25</h3>
+                                </div>
+
+                                <p className='leading-5 sm:text-lg lg:text-xl mt-2 lg:mt-4'>Clientes muito satisfeitos e felizes</p>
+                            </div>
+                            <div className='bg-dark-cyan border-t-2 border-dark-night sm:border-none p-2 xs:p-4 rounded-bl-xl sm:rounded-xl md:rounded-2xl'>
+                                <div className='flex items-center sm:gap-1 lg:gap-2'>
+                                    <span className='w-8 h-8 bg-[url("/assets/icons/spreadsheet.svg")] bg-no-repeat bg-center bg-[length:70%] sm:bg-[length:80%] lg:bg-[length:100%]' />
+
+                                    <h3 className='text-2xl lg:text-3xl'>64</h3>
+                                </div>
+
+                                <p className='leading-5 sm:text-lg lg:text-xl mt-2 lg:mt-4'>Projetos concluídos com sucesso</p>
+                            </div>
+                            <div className='bg-dark-cyan border-t-2 border-l-2 border-dark-night sm:border-none p-2 xs:p-4 rounded-br-xl sm:rounded-xl md:rounded-2xl'>
+                                <div className='flex items-center sm:gap-1 lg:gap-2'>
+                                    <span className='w-8 h-8 bg-[url("/assets/icons/group.svg")] bg-no-repeat bg-center bg-[length:70%] sm:bg-[length:80%] lg:bg-[length:100%]' />
+
+                                    <h3 className='text-2xl lg:text-3xl'>12</h3>
+                                </div>
+
+                                <p className='leading-5 sm:text-lg lg:text-xl mt-2 lg:mt-4'>Membros engajados e em atividade</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section id='services'>
                     <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
                         <Heading2Description
