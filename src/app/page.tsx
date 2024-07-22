@@ -41,6 +41,37 @@ export default function Home() {
             <Header />
 
             <main>
+                <section id='services'>
+                    <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
+                        <Heading2Description
+                            title='Como dar upgrade no seu negócio'
+                            description='Impulsione seu negócio com nossos serviços tecnológicos! Da criação de software à consultoria estratégica, ajudamos você a alcançar o sucesso. Descubra a inovação que transforma o seu negócio.'
+                        />
+
+                        <div className='flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 md:gap-4 lg:gap-12 xl:gap-16'>
+                            <div className='w-full md:max-w-[550px] lg:max-w-full md:mx-auto lg:mx-0 border-2 border-paw-paw text-paw-paw p-4 rounded-2xl'>
+                                <div className='flex items-center gap-1 lg:gap-2'>
+                                    <span className='w-6 h-6 bg-[url("/assets/icons/desktop.svg")] bg-no-repeat bg-center bg-[length:70%] sm:bg-[length:80%] lg:bg-[length:100%]' />
+
+                                    <h3 className='text-lg sm:text-xl lg:text-2xl'>Desenvolvimento Web</h3>
+                                </div>
+
+                                <p className='sm:text-lg lg:text-xl mt-2 lg:mt-4'>Aplicações web personalizadas para potencializar sua marca e seus resultados online.</p>
+                            </div>
+
+                            <div className='w-full md:max-w-[550px] lg:max-w-full md:mx-auto lg:mx-0 border-2 border-paw-paw text-paw-paw p-4 rounded-2xl'>
+                                <div className='flex items-center gap-1 lg:gap-2'>
+                                    <span className='w-6 h-6 bg-[url("/assets/icons/bulb.svg")] bg-no-repeat bg-center bg-[length:70%] sm:bg-[length:80%] lg:bg-[length:100%]' />
+
+                                    <h3 className='text-lg sm:text-xl lg:text-2xl'>Soluções Inovadoras</h3>
+                                </div>
+
+                                <p className='sm:text-lg lg:text-xl mt-2 lg:mt-4'>Inovação em soluções que transformam seu negócio e impulsionam o sucesso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section id='projects' className='bg-dark-night'>
                     <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
                         <Heading2Description
