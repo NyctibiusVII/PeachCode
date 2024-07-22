@@ -1,41 +1,15 @@
 import { Header } from '@components/header'
 import { Footer } from '@components/footer'
 
-import ProjectImage1 from '@../public/assets/images/projects/app-1.png'
-import ProjectImage2 from '@../public/assets/images/projects/app-2.png'
-import ProjectImage3 from '@../public/assets/images/projects/app-3.png'
-import ProjectImage4 from '@../public/assets/images/projects/app-4.png'
-import ProjectImage5 from '@../public/assets/images/projects/app-5.png'
 import GenericImage1 from '@../public/assets/images/generic-image-1.png'
 import GenericImage2 from '@../public/assets/images/generic-image-2.png'
 import GenericImage3 from '@../public/assets/images/generic-image-3.png'
 
 import Image from 'next/image'
+import { MarkText } from '@components/mark-text'
+import { processText, projectImages } from '@utils'
 
 export default function Home() {
-    const projectImages = [
-        {
-            src: ProjectImage1,
-            alt: 'Imagem do projeto Biocube, feito pela PeachCode.'
-        },
-        {
-            src: ProjectImage2,
-            alt: 'Imagem do projeto Boletim, feito pela PeachCode.'
-        },
-        {
-            src: ProjectImage3,
-            alt: 'Imagem do projeto Occurrences, feito pela PeachCode.'
-        },
-        {
-            src: ProjectImage4,
-            alt: 'Imagem do projeto Atenas Ceap, feito pela PeachCode.'
-        },
-        {
-            src: ProjectImage5,
-            alt: 'Imagem do projeto Finances, feito pela PeachCode.'
-        }
-    ]
-
     return (
         <>
             <Header />
@@ -44,7 +18,7 @@ export default function Home() {
                 <section id='services'>
                     <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
                         <Heading2Description
-                            title='Como dar upgrade no seu negócio'
+                            title='Como dar ^upgrade^ no seu negócio'
                             description='Impulsione seu negócio com nossos serviços tecnológicos! Da criação de software à consultoria estratégica, ajudamos você a alcançar o sucesso. Descubra a inovação que transforma o seu negócio.'
                         />
 
@@ -120,9 +94,9 @@ export default function Home() {
                                     <h3 className='text-glacier-white text-xl md:text-2xl'>Nossa abordagem para criação de soluções</h3>
                                     <p className='md:-mt-3'>Acreditamos que cada desafio tecnológico oferece uma oportunidade única de crescimento, envolvendo uma combinação de:</p>
                                     <ul>
-                                        <li className='text-zinnia my-0.5'>Criatividade.</li>
-                                        <li className='text-zinnia my-0.5'>Experiência técnica.</li>
-                                        <li className='my-0.5'><span className='text-zinnia'>Compreensão profunda</span> da demanda de nossos clientes e confiança para suas necessidades tecnológicas.</li>
+                                        <li className='my-0.5'><MarkText>Criatividade.</MarkText></li>
+                                        <li className='my-0.5'><MarkText>Experiência técnica.</MarkText></li>
+                                        <li className='my-0.5'><MarkText>Compreensão profunda</MarkText> da demanda de nossos clientes e confiança para suas necessidades tecnológicas.</li>
                                     </ul>
                                     <p>Trabalhamos lado a lado com as empresas para identificar soluções personalizadas que abordem suas necessidades específicas e ofereçam resultados tangíveis.</p>
                                 </div>
@@ -201,8 +175,8 @@ export default function Home() {
 const Heading2Description = ({ title, description }: { title: string, description: string }) => {
     return (
         <div className='flex flex-col items-center gap-2 lg:gap-4'>
-            <h2 className='uppercase text-center text-2xl md:text-3xl lg:text-4xl'>{title}</h2>
-            <p className='text-glacier-white/80 text-center leading-5 md:text-xl md:leading-6'>{description}</p>
+            <h2 className='uppercase text-center text-2xl md:text-3xl lg:text-4xl' dangerouslySetInnerHTML={{ __html: processText(title) }} />
+            <p className='text-glacier-white/80 text-center leading-5 md:text-xl md:leading-6' dangerouslySetInnerHTML={{ __html: processText(description) }} />
         </div>
     )
 }
