@@ -9,7 +9,7 @@
     * > .content { @apply w-full max-w-app-content mx-auto px-4 md:px-[7.5rem] }
 
     header { @apply py-2 }
-    main { @apply flex flex-col /*py-12 md:py-20 lg:py-24 xl:py-32 | gap-20 md:gap-32 xl:gap-40*/ }
+    main { @apply flex flex-col py-12 }
     footer { @apply bg-white/[0.01] border-t border-white/5 }
 
     input:-webkit-autofill,
@@ -52,4 +52,9 @@
 @keyframes tighten {
     from { width: 100%; }
     to { width: 0; }
+}
+@keyframes float {
+	0% { transform: translatey(0); }
+	50% { transform: translatey(-25%); }
+	100% { transform: translatey(0); }
 }

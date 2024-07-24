@@ -8,6 +8,7 @@ import GenericImage3 from '@../public/assets/images/generic-image-3.png'
 import Image from 'next/image'
 import { MarkText } from '@components/mark-text'
 import { processText, projectImages } from '@utils'
+import { Pacifico } from './fonts'
 
 export default function Home() {
     return (
@@ -15,6 +16,21 @@ export default function Home() {
             <Header />
 
             <main>
+                <div>
+                    <div className='content sm:py-14 lg:py-20 lg:mb-6 relative bg-[url("/assets/icons/logo/peach-colored.svg")] bg-no-repeat bg-center bg-[length:30%] sm:bg-[length:25%] lg:bg-[length:23%] italic font-extrabold text-white text-sm md:text-lg lg:text-xl select-none'>
+                        <h1 className='sr-only'>Peach Code! Seu site, nossa criação!</h1>
+
+                        <p className='sm:pl-20 md:pl-2 xl:pl-20 2xl:pl-36'>SEU SITE...</p>
+                        <p className={`${Pacifico.className} text-center text-7xl md:text-8xl lg:text-9xl mix-blend-screen bg-gradient-to-r from-swift-red via-zinnia to-paw-paw via-50% bg-clip-text text-transparent p-4 xs:py-8 sm:py-10 lg:py-12`}>Peach Code</p>
+                        <p className='sm:pr-20 md:pr-2 xl:pr-20 2xl:pr-36 text-end'>...NOSSA CRIAÇÃO</p>
+
+                        <svg className='w-9 h-9 hidden sm:inline md:hidden lg:inline absolute inset-x-0 mx-auto bottom-0 animate-[float_3s_ease-in-out_infinite]' xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='white'>
+                            <path d='M11.975 22H12c3.859 0 7-3.14 7-7V9c0-3.841-3.127-6.974-6.981-7h-.06C8.119 2.022 5 5.157 5 9v6c0 3.86 3.129 7 6.975 7zM7 9a5.007 5.007 0 0 1 4.985-5C14.75 4.006 17 6.249 17 9v6c0 2.757-2.243 5-5 5h-.025C9.186 20 7 17.804 7 15V9z' />
+                            <path d='M11 6h2v6h-2z' />
+                        </svg>
+                    </div>
+                </div>
+
                 <section className='bg-[linear-gradient(175deg,var(--tw-gradient-stops))] from-50% via-50% from-dark-cyan via-paw-paw to-zinnia'>
                     <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
                         <Heading2Description
