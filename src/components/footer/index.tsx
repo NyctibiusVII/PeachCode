@@ -57,10 +57,10 @@ export const Footer = () => {
                 <div className='w-fit h-fit mx-auto flex flex-col gap-8'>
                     <p className='w-full text-center sm:text-start md:text-center lg:text-start text-lg lg:text-xl'>Links</p>
 
-                    <nav className='w-full'>
+                    <nav id='navigation-footer' className='w-full'>
                         <ul className='flex flex-col items-center sm:items-start md:items-center lg:items-start gap-2'>
                             { headerLinks.map((menuRouter, index) =>
-                                <li key={index}>
+                                <li key={`${index}-footer`}>
                                     <Link href={menuRouter.href} className='text-glacier-white/80 text-sm text-nowrap hover:underline underline-offset-4'>
                                         {menuRouter.name}
                                     </Link>

@@ -2,7 +2,7 @@ import type { MenuItensType } from '@types'
 
 import Link from 'next/link'
 
-export const PopoverMenu = ({ routerPath, headerLinks }: { routerPath: string, headerLinks: Array<MenuItensType> }) => {
+export const PopoverMenu = ({ headerLinks }: { headerLinks: Array<MenuItensType> }) => {
     const handleMenu = () => {
         const openCloseMenu = document.getElementById('open-close-menu') as HTMLButtonElement
         const overlay = document.getElementById('menu-overlay') as HTMLSpanElement
@@ -55,24 +55,16 @@ export const PopoverMenu = ({ routerPath, headerLinks }: { routerPath: string, h
                 <nav id='menu-content' className='w-[calc(100%_+_4px)] hidden absolute top-[2.45rem] -left-[2px] overflow-hidden z-[60]'>
                     <ul className='w-full flex flex-col'>
                         { headerLinks.map((menuRouter, index) => {
-                            const activeRouter_link = menuRouter.href === routerPath ? 'text-dark-night font-medium' : 'text-zinnia'
-                            const activeRouter_container = menuRouter.href === routerPath ?
-                                index === headerLinks.length -1 ?
-                                    'bg-zinnia border-zinnia hover:brightness-90 rounded-b-md' // Last active
-                                    :
-                                    'bg-zinnia border-zinnia hover:brightness-90' // Active
+                            const activeRouter_container = index === headerLinks.length -1 ?
+                                'border-b-2 rounded-b-md pb-2' // Last
                                 :
-                                index === headerLinks.length -1 ?
-                                    'bg-dark-cyan/50 border-b-2 border-zinnia hover:bg-dark-night rounded-b-md pb-2' // Last inactive
+                                index === 0 ?
+                                    'pt-2' // First
                                     :
-                                    index === 0 ?
-                                        'bg-dark-cyan/50 border-zinnia hover:bg-dark-night pt-2' // First inactive
-                                        :
-                                        'bg-dark-cyan/50 border-zinnia hover:bg-dark-night' // Inactive
-
+                                    '' // Rest
                             return (
-                                <li key={index} className={`border-x-2 ${activeRouter_container} flex`}>
-                                    <Link href={menuRouter.href} className={`w-full ${activeRouter_link} text-center text-xl text-nowrap py-1`}>
+                                <li id={`li-a-${menuRouter.name}`} key={`${index}-popover`} className={`bg-[#001116] hover:bg-dark-cyan text-zinnia/75 border-x-2 border-zinnia ${activeRouter_container} flex`}>
+                                    <Link id={`a-${menuRouter.name}`} href={menuRouter.href} className='w-full text-center text-xl text-nowrap py-1'>
                                         {menuRouter.name}
                                     </Link>
                                 </li>

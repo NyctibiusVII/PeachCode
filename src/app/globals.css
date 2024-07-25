@@ -8,8 +8,8 @@
     header, main, footer { @apply w-full }
     * > .content { @apply w-full max-w-app-content mx-auto px-4 md:px-[7.5rem] }
 
-    header { @apply py-2 }
-    main { @apply flex flex-col py-12 }
+    header { @apply bg-dark-cyan fixed top-0 left-0 py-2 transition-shadow z-10 }
+    main { @apply flex flex-col pb-12 pt-[calc(3rem_+_3.75rem)] }
     footer { @apply bg-white/[0.01] border-t border-white/5 }
 
     input:-webkit-autofill,
@@ -39,19 +39,13 @@
     .text-color-animate { @apply bg-clip-text bg-zinnia bg-gradient-to-r from-zinnia via-creepy-green bg-[length:700%_700%] text-transparent animate-[color_5s_linear_infinite] }
     .stretch-box-animate { @apply animate-[stretch_500ms_linear_both] }
     .tighten-box-animate { @apply animate-[tighten_500ms_linear_both] }
+    #navigation-header .active-link { @apply text-zinnia underline }
+    #menu-content .active-link { @apply bg-dark-night/80 text-zinnia }
 }
 
 @keyframes color {
     from { background-position: 0% 50%; }
     to { background-position: 100% 50%; }
-}
-@keyframes stretch {
-    from { width: 0; }
-    to { width: 100%; }
-}
-@keyframes tighten {
-    from { width: 100%; }
-    to { width: 0; }
 }
 @keyframes float {
 	0% { transform: translatey(0); }

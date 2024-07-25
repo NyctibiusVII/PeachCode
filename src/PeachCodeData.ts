@@ -8,7 +8,7 @@ const instagramUrl = 'https://www.instagram.com/peach-code'
 const whatsappUrl = 'https://wa.me/+' + phone.replace(/\D/g, '')
 
 const appRoutesAbsolutePath = [
-    '#',
+    '#home',
     '#services',
     '#projects',
     '#about-us',

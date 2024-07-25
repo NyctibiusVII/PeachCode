@@ -1,14 +1,18 @@
 import { Header } from '@components/header'
 import { Footer } from '@components/footer'
+import { MarkText } from '@components/mark-text'
+
+import {
+    processText,
+    projectImages
+} from '@utils'
+import { Pacifico } from './fonts'
 
 import GenericImage1 from '@../public/assets/images/generic-image-1.png'
 import GenericImage2 from '@../public/assets/images/generic-image-2.png'
 import GenericImage3 from '@../public/assets/images/generic-image-3.png'
 
 import Image from 'next/image'
-import { MarkText } from '@components/mark-text'
-import { processText, projectImages } from '@utils'
-import { Pacifico } from './fonts'
 
 export default function Home() {
     return (
@@ -16,7 +20,7 @@ export default function Home() {
             <Header />
 
             <main>
-                <div>
+                <div className='-z-10'>
                     <div className='content sm:py-14 lg:py-20 lg:mb-6 relative bg-[url("/assets/icons/logo/peach-colored.svg")] bg-no-repeat bg-center bg-[length:30%] sm:bg-[length:25%] lg:bg-[length:23%] italic font-extrabold text-white text-sm md:text-lg lg:text-xl select-none'>
                         <h1 className='sr-only'>Peach Code! Seu site, nossa criação!</h1>
 
@@ -31,7 +35,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <section className='bg-[linear-gradient(175deg,var(--tw-gradient-stops))] from-50% via-50% from-dark-cyan via-paw-paw to-zinnia'>
+                <section id='home' className='bg-[linear-gradient(175deg,var(--tw-gradient-stops))] from-50% via-50% from-dark-cyan via-paw-paw to-zinnia'>
                     <div className='content py-16 flex flex-col gap-4 lg:gap-8'>
                         <Heading2Description
                             title='O que nós fazemos'
