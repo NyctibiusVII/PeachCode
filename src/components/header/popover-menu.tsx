@@ -64,7 +64,7 @@ export const PopoverMenu = ({ headerLinks }: { headerLinks: Array<MenuItensType>
                                     '' // Rest
                             return (
                                 <li id={`li-a-${menuRouter.name}`} key={`${index}-popover`} className={`bg-[#001116] hover:bg-dark-cyan text-zinnia/75 border-x-2 border-zinnia ${activeRouter_container} flex`}>
-                                    <Link id={`a-${menuRouter.name}`} href={menuRouter.href} className='w-full text-center text-xl text-nowrap py-1'>
+                                    <Link id={`a-${menuRouter.name}`} href={menuRouter.href} onClick={handleMenu} className='w-full text-center text-xl text-nowrap py-1'>
                                         {menuRouter.name}
                                     </Link>
                                 </li>
