@@ -42,9 +42,9 @@ export default function Home() {
                             description='A Peach Code é uma renomada empresa de consultoria em tecnologia de informação, especializada em proporcionar soluções inovadoras e eficientes para as necessidades tecnológicas atuais. Com um histórico sólido e uma equipe de profissionais altamente qualificados, estamos comprometidos em elevar os padrões da indústria por meio de nossos serviços de desenvolvimento.'
                         />
 
-                        <div className='w-fit h-fit mx-auto bg-gradient-to-tl from-transparent from-60% to-paw-paw/50 p-1 rounded-2xl md:rounded-[20px] flex items-center'>
-                            <div className='bg-dark-cyan p-6 rounded-xl md:rounded-2xl flex flex-col gap-4 sm:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 items-center sm:flex-row md:flex-col lg:flex-row'>
-                                <div className='sm:max-w-96 md:max-w-full lg:max-w-[30rem] xl:max-w-[35rem] 2xl:max-w-[40rem] flex flex-col gap-2 md:gap-4 text-glacier-white/80 leading-5 md:text-xl md:leading-6'>
+                        <div className='w-full h-fit flex flex-col gap-4 items-center sm:flex-row md:flex-col lg:flex-row'>
+                            <div className='w-fit h-fit bg-gradient-to-tl from-transparent from-60% to-paw-paw/50 p-1 rounded-2xl md:rounded-[20px] flex items-center'>
+                                <div className='sm:max-w-[25rem] md:max-w-full lg:max-w-[33rem] xl:max-w-[39rem] 2xl:max-w-[50rem] bg-dark-cyan p-6 flex flex-col gap-2 md:gap-4 text-glacier-white/80 leading-5 md:text-xl md:leading-6 rounded-xl md:rounded-2xl'>
                                     <h3 className='text-glacier-white text-xl md:text-2xl'>Porque escolher a Peach Code?</h3>
                                     <p className='md:-mt-3'>Possuímos TRÊS pilares principais para o nosso trabalho:</p>
                                     <ul>
@@ -54,16 +54,16 @@ export default function Home() {
                                     </ul>
                                     <p className='italic text-glacier-white/50 text-sm lg:text-base'>Acreditamos que a tecnologia é a chave para transformar desafios em oportunidades.</p>
                                 </div>
-
-                                <Image
-                                    className='w-40 h-auto sm:w-32 md:w-48 lg:w-60 xl:w-72'
-                                    src='/favicon.svg'
-                                    width={16}
-                                    height={16}
-                                    priority={false}
-                                    alt='Ícone da PeachCode company.'
-                                />
                             </div>
+
+                            <Image
+                                className='w-40 h-auto sm:w-44 md:w-48 lg:w-60 xl:w-72 mx-auto'
+                                src='/favicon.svg'
+                                width={16}
+                                height={16}
+                                priority={false}
+                                alt='Ícone da PeachCode company.'
+                            />
                         </div>
 
                         <div className='grid grid-cols-2 lg:grid-cols-4 sm:gap-2 xl:gap-8 2xl:gap-12'>
@@ -171,18 +171,18 @@ export default function Home() {
                             description='Somos uma equipe apaixonada e dedicada de profissionais de tecnologia, impulsionados pela visão de transformar o cenário empresarial por meio de soluções inovadoras e inteligentes. Como consultoria em tecnologia de informação, nossa missão é fornecer resultados excepcionais, aproveitando ao máximo nosso conhecimento especializado em desenvolvimento.'
                         />
 
-                        <div className='w-fit h-fit mx-auto bg-gradient-to-br from-transparent from-60% to-zinnia/50 p-1 rounded-2xl flex items-center'>
-                            <div className='bg-dark-night p-6 rounded-xl flex flex-col gap-4 sm:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 items-center sm:flex-row md:flex-col lg:flex-row'>
-                                <Image
-                                    className='w-40 h-auto sm:w-32 md:w-48 lg:w-60 xl:w-72'
-                                    src='/assets/icons/logo/peach-alter.svg'
-                                    width={16}
-                                    height={16}
-                                    priority={false}
-                                    alt='Ícone da PeachCode company.'
-                                />
+                        <div className='w-full h-fit flex flex-col gap-4 items-center sm:flex-row md:flex-col lg:flex-row'>
+                            <Image
+                                className='w-40 h-auto sm:w-44 md:w-48 lg:w-60 xl:w-72 mx-auto'
+                                src='/assets/icons/logo/peach-alter.svg'
+                                width={16}
+                                height={16}
+                                priority={false}
+                                alt='Ícone da PeachCode company.'
+                            />
 
-                                <div className='sm:max-w-96 md:max-w-full lg:max-w-[30rem] xl:max-w-[35rem] 2xl:max-w-[40rem] flex flex-col gap-2 md:gap-4 text-glacier-white/80 leading-5 md:text-xl md:leading-6'>
+                            <div className='w-fit h-fit bg-gradient-to-br from-transparent from-60% to-zinnia/50 p-1 rounded-2xl md:rounded-[20px] flex items-center'>
+                                <div className='sm:max-w-[25rem] md:max-w-full lg:max-w-[33rem] xl:max-w-[39rem] 2xl:max-w-[50rem] bg-dark-night p-6 flex flex-col gap-2 md:gap-4 text-glacier-white/80 leading-5 md:text-xl md:leading-6 rounded-xl md:rounded-2xl'>
                                     <h3 className='text-glacier-white text-xl md:text-2xl'>Nossa abordagem para criação de soluções</h3>
                                     <p className='md:-mt-3'>Acreditamos que cada desafio tecnológico oferece uma oportunidade única de crescimento, envolvendo uma combinação de:</p>
                                     <ul>
