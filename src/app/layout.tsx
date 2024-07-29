@@ -3,6 +3,9 @@ import type {
     Metadata
 } from 'next'
 
+import { Header } from '@components/header'
+import { Footer } from '@components/footer'
+
 import { rootUrl } from '@PeachCodeData'
 import { NotoSans } from './fonts'
 
@@ -136,7 +139,9 @@ export default function RootLayout({
     return (
         <html lang='pt-BR'>
             <body className={NotoSans.className} suppressHydrationWarning={suppressHydrationWarning}>
+                <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     )
