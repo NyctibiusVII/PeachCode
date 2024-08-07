@@ -1,10 +1,8 @@
-import { Header } from '@components/header'
-import { Footer } from '@components/footer'
 import { MarkText } from '@components/mark-text'
 
 import {
     processText,
-    projectImages
+    projectsDataList
 } from '@utils'
 import { Pacifico } from './fonts'
 
@@ -144,21 +142,27 @@ export default function Home() {
                     />
 
                     <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-4 sm:gap-y-9 md:gap-y-6 lg:gap-y-12 xl:gap-y-8'>
-                        { projectImages.map((project, index) =>
-                            <Image
+                        { projectsDataList.map((project, index) =>
+                            <Link
                                 key={index}
-                                className='w-[288px] h-[140px] md:w-80 md:h-40 hover:scale-105 sm:hover:scale-110 mx-auto border-2 border-azure rounded-2xl transition-transform'
-                                src={project.src}
-                                width={320}
-                                height={160}
-                                placeholder='blur'
-                                priority={false}
-                                alt={project.alt}
-                            />
+                                href={`/projects#${project.title.toLocaleLowerCase()}`}
+                                title={`Ver o projeto ${project.title}`}
+                            >
+                                <Image
+                                    key={index}
+                                    className='w-[288px] h-[140px] md:w-80 md:h-40 hover:scale-105 mx-auto border-2 border-azure rounded-2xl transition-transform'
+                                    src={project.images[0]}
+                                    width={320}
+                                    height={160}
+                                    placeholder='blur'
+                                    priority={false}
+                                    alt={project.genericAlt}
+                                />
+                            </Link>
                         ) }
 
-                        <Link href='/projects' className='w-[288px] h-[140px] md:w-80 md:h-40 bg-[url("/assets/icons/logo/peach-pattern.svg")] bg-[top_left_35%] hover:shadow-[inset_0_0_3rem_0_rgb(0_25_32_/_20%)] mx-auto flex-center text-[#577680] text-lg md:text-xl lg:text-2xl hover:underline underline-offset-4 border-2 border-azure rounded-2xl overflow-hidden transition-all'>
-                            Saber mais...
+                        <Link href='/projects' className='w-[288px] h-[140px] md:w-80 md:h-40 bg-[url("/assets/icons/logo/peach-pattern.svg")] bg-[top_left_35%] hover:shadow-[inset_0_0_3rem_0_rgb(0_25_32_/_20%)] mx-auto flex-center text-[#415B64]  md:text-lg lg:text-xl hover:underline underline-offset-4 border-2 border-azure rounded-2xl overflow-hidden transition-all'>
+                            <p className='bg-dark-night px-4 py-1 border-2 border-azure rounded-lg'>Ver mais projetos</p>
                         </Link>
                     </div>
                 </div>
@@ -264,8 +268,8 @@ export default function Home() {
 const Heading2Description = ({ title, description }: { title: string, description: string }) => {
     return (
         <div className='flex flex-col items-center gap-2 lg:gap-4'>
-            <h2 className='uppercase text-center text-2xl md:text-3xl lg:text-4xl' dangerouslySetInnerHTML={{ __html: processText(title) }} />
-            <p className='text-glacier-white/80 text-center leading-5 md:text-xl md:leading-6' dangerouslySetInnerHTML={{ __html: processText(description) }} />
+            <h2 className='uppercase text-center text-2xl md:text-3xl lg:text-4xl' dangerouslySetInnerHTML={{ __html: processText({ text: title }) }} />
+            <p className='text-glacier-white/80 text-center leading-5 md:text-xl md:leading-6' dangerouslySetInnerHTML={{ __html: processText({ text: description }) }} />
         </div>
     )
 }
