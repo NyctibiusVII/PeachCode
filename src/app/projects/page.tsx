@@ -1,9 +1,14 @@
+import { CarouselProjectImages } from '@components/carousel'
+
 import {
     processText,
     projectsDataList
 } from '@utils'
-import { CarouselProjectImages } from '@components/carousel'
+import { projectsMetadata } from '@PeachCodeSEO'
+
 import Image from 'next/image'
+
+export const metadata = projectsMetadata
 
 export default function Projects() {
     return (

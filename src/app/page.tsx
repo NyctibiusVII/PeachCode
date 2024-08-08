@@ -5,6 +5,7 @@ import {
     projectsDataList
 } from '@utils'
 import { Pacifico } from './fonts'
+import { homeMetadata } from '@PeachCodeSEO'
 
 import GenericImage1 from '@../public/assets/images/generic-image-1.png'
 import GenericImage2 from '@../public/assets/images/generic-image-2.png'
@@ -12,6 +13,8 @@ import GenericImage3 from '@../public/assets/images/generic-image-3.png'
 
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata = homeMetadata
 
 export default function Home() {
     return (

@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 }
 export const metadata: Metadata = {
     title: 'PeachCode',
-    description: 'PeachCode ...',
+    description: 'A Peach Code, empresa de consultoria em TI com vasta experiência, oferece soluções inovadoras e personalizadas para as necessidades do mercado atual. Nossa equipe altamente qualificada está comprometida em superar expectativas e elevar o padrão da indústria.',
     metadataBase: new URL(rootUrl),
     openGraph: {
         siteName: 'PeachCode',
@@ -39,14 +39,9 @@ export const metadata: Metadata = {
         statusBarStyle: 'default',
         capable: true
     },
-    /* verification: {
-        google: 'OjYiqlxK6******',
-        yandex: '94b9dc01e******',
-        other: {
-            'msvalidate.01': '9AD4802CE3C4******',
-            // 'facebook-domain-verification': '__DATA__'
-        }
-    },*/
+    verification: {
+        google: 'OjYiqlxK64Fx5dZre97pwHGJ7pYgOP4vQYH1UCOdBuo'
+    },
     icons: {
         icon: [
             {

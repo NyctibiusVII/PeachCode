@@ -1,5 +1,6 @@
 {
   "name": "peach-code",
+  "description": "A Peach Code, empresa de consultoria em TI com vasta experiência, oferece soluções inovadoras e personalizadas para as necessidades do mercado atual. Nossa equipe altamente qualificada está comprometida em superar expectativas e elevar o padrão da indústria.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
