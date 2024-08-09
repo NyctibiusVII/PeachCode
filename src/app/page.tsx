@@ -164,8 +164,8 @@ export default function Home() {
                             </Link>
                         ) }
 
-                        <Link href='/projects' className='w-[288px] h-[140px] md:w-80 md:h-40 bg-[url("/assets/icons/logo/peach-pattern.svg")] bg-[top_left_35%] hover:shadow-[inset_0_0_3rem_0_rgb(0_25_32_/_20%)] mx-auto flex-center text-[#415B64]  md:text-lg lg:text-xl hover:underline underline-offset-4 border-2 border-azure rounded-2xl overflow-hidden transition-all'>
-                            <p className='bg-dark-night px-4 py-1 border-2 border-azure rounded-lg'>Ver mais projetos</p>
+                        <Link href='/projects' className='w-[288px] h-[140px] md:w-80 md:h-40 bg-[url("/assets/icons/logo/peach-pattern.svg")] bg-[top_left_35%] hover:shadow-[inset_0_0_3rem_0_rgb(0_25_32_/_20%)] mx-auto flex-center text-[#b6c5cb]  md:text-lg lg:text-xl hover:underline underline-offset-4 border-2 border-azure rounded-2xl overflow-hidden transition-all'>
+                            <p className='bg-dark-night px-4 py-1 border-2 border-[#b6c5cb] rounded-lg'>Ver mais projetos</p>
                         </Link>
                     </div>
                 </div>
