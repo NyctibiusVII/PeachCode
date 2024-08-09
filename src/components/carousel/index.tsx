@@ -23,7 +23,7 @@ export const CarouselProjectImages = ({ project }: { project: ProjectsDataType }
                 height='500'
                 placeholder='blur'
                 priority={true}
-                quality={90}
+                quality={100}
                 alt={project.genericAlt}
             />
         ) }

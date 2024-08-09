@@ -1,39 +1,39 @@
 import { ProjectsDataType } from '@types'
 
-import ImageAtenas1 from '@../public/assets/images/projects/atenas/img1.png'
-import ImageAtenas2 from '@../public/assets/images/projects/atenas/img2.png'
-import ImageAtenas3 from '@../public/assets/images/projects/atenas/img3.png'
-import LogoImageAtenas from '@../public/assets/images/projects/atenas/logo.png'
+import ImageAtenas1 from '@../public/assets/images/projects/atenas/img1.webp'
+import ImageAtenas2 from '@../public/assets/images/projects/atenas/img2.webp'
+import ImageAtenas3 from '@../public/assets/images/projects/atenas/img3.webp'
+import LogoImageAtenas from '@../public/assets/images/projects/atenas/logo.webp'
 
-import ImageBiocube1 from '@../public/assets/images/projects/biocube/img1.png'
-import ImageBiocube2 from '@../public/assets/images/projects/biocube/img2.png'
-import ImageBiocube3 from '@../public/assets/images/projects/biocube/img3.png'
-import ImageBiocube4 from '@../public/assets/images/projects/biocube/img4.png'
-import ImageBiocube5 from '@../public/assets/images/projects/biocube/img5.png'
-import ImageBiocube6 from '@../public/assets/images/projects/biocube/img6.png'
-import ImageBiocube7 from '@../public/assets/images/projects/biocube/img7.png'
-import LogoImageBiocube from '@../public/assets/images/projects/biocube/logo.png'
+import ImageBiocube1 from '@../public/assets/images/projects/biocube/img1.webp'
+import ImageBiocube2 from '@../public/assets/images/projects/biocube/img2.webp'
+import ImageBiocube3 from '@../public/assets/images/projects/biocube/img3.webp'
+import ImageBiocube4 from '@../public/assets/images/projects/biocube/img4.webp'
+import ImageBiocube5 from '@../public/assets/images/projects/biocube/img5.webp'
+import ImageBiocube6 from '@../public/assets/images/projects/biocube/img6.webp'
+import ImageBiocube7 from '@../public/assets/images/projects/biocube/img7.webp'
+import LogoImageBiocube from '@../public/assets/images/projects/biocube/logo.webp'
 
-import ImageBoletim1 from '@../public/assets/images/projects/boletim/img1.png'
-import ImageBoletim2 from '@../public/assets/images/projects/boletim/img2.png'
-import ImageBoletim3 from '@../public/assets/images/projects/boletim/img3.png'
-import ImageBoletim4 from '@../public/assets/images/projects/boletim/img4.png'
-import ImageBoletim5 from '@../public/assets/images/projects/boletim/img5.png'
-import LogoImageBoletim from '@../public/assets/images/projects/boletim/logo.png'
+import ImageBoletim1 from '@../public/assets/images/projects/boletim/img1.webp'
+import ImageBoletim2 from '@../public/assets/images/projects/boletim/img2.webp'
+import ImageBoletim3 from '@../public/assets/images/projects/boletim/img3.webp'
+import ImageBoletim4 from '@../public/assets/images/projects/boletim/img4.webp'
+import ImageBoletim5 from '@../public/assets/images/projects/boletim/img5.webp'
+import LogoImageBoletim from '@../public/assets/images/projects/boletim/logo.webp'
 
-import ImageFinances1 from '@../public/assets/images/projects/finances/img1.png'
-import ImageFinances2 from '@../public/assets/images/projects/finances/img2.png'
-import ImageFinances3 from '@../public/assets/images/projects/finances/img3.png'
-import ImageFinances4 from '@../public/assets/images/projects/finances/img4.png'
-import LogoImageFinances from '@../public/assets/images/projects/finances/logo.png'
+import ImageFinances1 from '@../public/assets/images/projects/finances/img1.webp'
+import ImageFinances2 from '@../public/assets/images/projects/finances/img2.webp'
+import ImageFinances3 from '@../public/assets/images/projects/finances/img3.webp'
+import ImageFinances4 from '@../public/assets/images/projects/finances/img4.webp'
+import LogoImageFinances from '@../public/assets/images/projects/finances/logo.webp'
 
-import ImageOccurrences1 from '@../public/assets/images/projects/occurrences/img1.png'
-import ImageOccurrences2 from '@../public/assets/images/projects/occurrences/img2.png'
-import ImageOccurrences3 from '@../public/assets/images/projects/occurrences/img3.png'
-import ImageOccurrences4 from '@../public/assets/images/projects/occurrences/img4.png'
-import ImageOccurrences5 from '@../public/assets/images/projects/occurrences/img5.png'
-import ImageOccurrences6 from '@../public/assets/images/projects/occurrences/img6.png'
-import LogoImageOccurrences from '@../public/assets/images/projects/occurrences/logo.png'
+import ImageOccurrences1 from '@../public/assets/images/projects/occurrences/img1.webp'
+import ImageOccurrences2 from '@../public/assets/images/projects/occurrences/img2.webp'
+import ImageOccurrences3 from '@../public/assets/images/projects/occurrences/img3.webp'
+import ImageOccurrences4 from '@../public/assets/images/projects/occurrences/img4.webp'
+import ImageOccurrences5 from '@../public/assets/images/projects/occurrences/img5.webp'
+import ImageOccurrences6 from '@../public/assets/images/projects/occurrences/img6.webp'
+import LogoImageOccurrences from '@../public/assets/images/projects/occurrences/logo.webp'
 
 /**
  * ProcessText - Function that processes text to highlight words with a specific color and/or underline it based on specific characters surrounding it.
@@ -75,7 +75,7 @@ export const processText = ({ text, personalizedColor='#fedcba' }: { text:string
 export const projectsDataList: Array<ProjectsDataType> = [
     {
         title: 'Atenas',
-        description: processText({ text: '~Lorem Ipsum~ is simply dummy text of the printing and typesetting industry. ~Lorem Ipsum~ has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing ~Lorem Ipsum~ passages, and more recently with desktop publishing software like Aldus PageMaker including versions of ~Lorem Ipsum~.', personalizedColor: '#6746A4' }),
+        description: processText({ text: '~Lorem Ipsum~ is simply dummy text of the printing and typesetting industry. ~Lorem Ipsum~ has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing ~Lorem Ipsum~ passages, and more recently with desktop publishing software like Aldus PageMaker including versions of ~Lorem Ipsum~.', personalizedColor: '#B58CFF' }),
         images: [ImageAtenas1, ImageAtenas2, ImageAtenas3],
         genericAlt: 'Imagem(ns) do projeto Atenas - Ceap, feito pela PeachCode.',
         logo: {
@@ -97,7 +97,7 @@ export const projectsDataList: Array<ProjectsDataType> = [
         }
     }, {
         title: 'Boletim',
-        description: processText({ text: 'Implementamos um ~gerador de boletins escolares~ online que oferece aos usuários uma ~solução fácil~ e ~personalizável~ para criar boletins de alunos. A personalização aprimorada resultou em maior engajamento dos alunos e motivação para os estudos. \n O gerador de boletins escolares serve como uma alternativa valiosa, especialmente quando os principais sistemas estaduais enfrentam congestionamentos. Isso _libera os professores da tarefa demorada de criar boletins manualmente_, permitindo que se concentrem em suas funções principais de ensino. Além disso, o gerador oferece ~eficiência~, ~personalização~ e ~engajamento~, tornando-se uma ferramenta essencial para professores e alunos.', personalizedColor: '#E2E8F0' }),
+        description: processText({ text: 'Implementamos um ~gerador de boletins escolares~ online que oferece aos usuários uma ~solução fácil~ e ~personalizável~ para criar boletins de alunos. A personalização aprimorada resultou em maior engajamento dos alunos e motivação para os estudos. \n O gerador de boletins escolares serve como uma alternativa valiosa, especialmente quando os principais sistemas estaduais enfrentam congestionamentos. Isso _libera os professores da tarefa demorada de criar boletins manualmente_, permitindo que se concentrem em suas funções principais de ensino. Além disso, o gerador oferece ~eficiência~, ~personalização~ e ~engajamento~, tornando-se uma ferramenta essencial para professores e alunos.', personalizedColor: '#ffffff' }),
         images: [ImageBoletim1, ImageBoletim2, ImageBoletim3, ImageBoletim4, ImageBoletim5],
         genericAlt: 'Imagem(ns) do projeto Boletim - GovSP, feito pela PeachCode.',
         logo: {

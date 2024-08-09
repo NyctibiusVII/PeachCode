@@ -6,12 +6,12 @@ import {
 /* --- Static Metadata --- */
 const metaImages = [
     {
-        url: `${rootUrl}/assets/images/thumbnail.png`,
+        url: `${rootUrl}/assets/images/thumbnail.webp`,
         width: 2000,
         height: 1000,
         alt: 'Página inicial do site PeachCode.'
     }, {
-        url: `${rootUrl}/assets/images/projects.png`,
+        url: `${rootUrl}/assets/images/projects.webp`,
         width: 2000,
         height: 1000,
         alt: 'Projetos da PeachCode.'
