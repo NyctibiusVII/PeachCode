@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 export const CarouselProjectImages = ({ project }: { project: ProjectsDataType }) =>
     <Carousel
+        id={`carousel-${project.title}`}
         className='max-w-[1000px] mx-auto shadow-2xl rounded-2xl overflow-hidden'
         autoplay
         autoplayInterval={5000}
