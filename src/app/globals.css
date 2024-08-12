@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+    html { @apply lg:text-[90%] }
     body { @apply w-full h-screen bg-dark-cyan text-glacier-white antialiased selection:bg-clover-green/75 selection:text-white flex flex-col items-center justify-start }
 
     header, main, footer { @apply w-full }

@@ -20,7 +20,7 @@ export default function Home() {
     return (
         <main>
             <div className='-z-10'>
-                <div className='content sm:py-14 lg:py-20 lg:mb-6 relative bg-[url("/assets/icons/logo/peach-colored.svg")] bg-no-repeat bg-center bg-[length:30%] sm:bg-[length:25%] lg:bg-[length:23%] italic font-extrabold text-white text-sm md:text-lg lg:text-xl select-none'>
+                <div className='content sm:py-14 lg:py-20 lg:mb-6 relative bg-[url("/assets/icons/logo/peach-colored.svg")] bg-no-repeat bg-center bg-[length:30%] sm:bg-[length:25%] lg:bg-[length:20%] italic font-extrabold text-white text-sm md:text-lg lg:text-xl select-none'>
                     <h1 className='sr-only'>Peach Code! Seu site, nossa criação!</h1>
 
                     <p className='sm:pl-20 md:pl-2 xl:pl-20 2xl:pl-36'>SEU SITE...</p>
