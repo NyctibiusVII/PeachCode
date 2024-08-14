@@ -1,0 +1,69 @@
+import { CarouselProjectImages } from '@components/carousel'
+
+import {
+    processText,
+    projectsDataList
+} from '@utils'
+import { projectsMetadata } from '@PeachCodeSEO'
+
+import { Suspense } from 'react'
+import Image from 'next/image'
+
+export const metadata = projectsMetadata
+
+export default function Projects() {
+    return (
+        <main>
+            { projectsDataList.map((project, index) => {
+                const animateColorClassName = [
+                    'from-[#6746A4] from-10% via-[#A3FE47] to-[#6746A4] to-90% text-your-color-animate',
+                    'from-[#01F26D] from-10% via-[#07361C] to-[#01F26D] to-90% text-your-color-animate',
+                    'from-[#F1F5F9] from-10% via-[#111827] to-[#F1F5F9] to-90% text-your-color-animate',
+                    'from-[#50946C] from-10% via-[#294D38] to-[#50946C] to-90% text-your-color-animate',
+                    'from-[#B2C0EA] from-10% via-[#1E2A50] to-[#B2C0EA] to-90% text-your-color-animate',
+                ]
+
+                return (
+                    <section id={project.title.toLocaleLowerCase()} key={index}>
+                        <Suspense fallback={SkeletonProjectComponent}>
+                            <div className='content py-24 flex flex-col gap-4 lg:gap-8'>
+                                <div className='flex flex-col items-center gap-2 lg:gap-4'>
+                                    <h2 className={`${animateColorClassName[index]} uppercase font-semibold text-center text-3xl md:text-4xl lg:text-5xl`}>{project.title}</h2>
+                                    <p className='text-glacier-white/75 text-center leading-5 md:text-xl md:leading-6' dangerouslySetInnerHTML={{ __html: processText({ text: project.description }) }} />
+                                </div>
+
+                                <div className='flex flex-col gap-2'>
+                                    <CarouselProjectImages project={project} />
+
+                                    <Image
+                                        className='w-24 sm:w-fit h-fit mx-auto'
+                                        src={project.logo.src}
+                                        width={project.logo.width}
+                                        height={project.logo.height}
+                                        placeholder='empty'
+                                        priority={false}
+                                        alt={project.logo.alt}
+                                    />
+                                </div>
+                            </div>
+                        </Suspense>
+                    </section>
+                )
+            }) }
+        </main>
+    )
+}
+
+const SkeletonProjectComponent = (
+    <div className='content py-24 flex flex-col items-center gap-4 lg:gap-8'>
+        <span className='w-full max-w-[30%] h-[2.25rem] md:h-[2.5rem] lg:h-[3rem] bg-dark-night rounded-lg animate-pulse' />
+
+        <div className='w-full flex flex-col items-center gap-2'>
+            <span className='w-full max-w-[80%] h-[1.25rem] md:h-[1.5rem] bg-dark-night rounded-lg animate-pulse' />
+            <span className='w-full h-[1.25rem] md:h-[1.5rem] bg-dark-night rounded-lg animate-pulse' />
+            <span className='w-full max-w-[70%] h-[1.25rem] md:h-[1.5rem] bg-dark-night rounded-lg animate-pulse' />
+        </div>
+
+        <span className='w-full max-w-[1000px] pb-[40%] bg-dark-night rounded-2xl animate-pulse' />
+    </div>
+)

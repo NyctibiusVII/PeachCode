@@ -5,9 +5,11 @@ import { useHeaderLinks } from '@/hooks/useHeaderLinks'
 import { Pacifico } from '@app/fonts'
 
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 export const Header = () => {
+    const router = usePathname()
     const headerLinks = useHeaderLinks
 
     useEffect(() => {
@@ -19,55 +21,71 @@ export const Header = () => {
         const handleScroll = () => {
             addShadow()
 
-            const sections = document.querySelectorAll('section')
+            const header = document.getElementById('navigation-header') as HTMLElement
+            const menuContainer = document.getElementById('menu-container') as HTMLElement
+            const menuContent = document.getElementById('menu-content') as HTMLElement
+            // const footer = document.getElementById('navigation-footer') as HTMLElement
 
-            const firstSection = sections[0]
-            const lastSection = sections[sections.length - 1]
+            const linksHeader = header.querySelectorAll('a')
+            const linksPopover = menuContent.querySelectorAll('a')
 
-            let activeSectionId = ''
+            linksHeader.forEach((link: HTMLAnchorElement) => link.classList.remove('active-link'))
+            if (menuContainer) linksPopover.forEach((link: HTMLAnchorElement) => link.classList.remove('active-link'))
 
-            if (window.pageYOffset < firstSection.offsetTop) {
-                activeSectionId = firstSection.id
-            } else if (window.pageYOffset + window.innerHeight > lastSection.offsetTop + lastSection.offsetHeight) {
-                activeSectionId = lastSection.id
-            } else {
-                sections.forEach((section) => {
-                    const sectionTop = section.offsetTop;
-                    const sectionBottom = section.offsetTop + section.offsetHeight
+            if(router === '/') {
+                const sections = document.querySelectorAll('section')
+                if (!sections) return
 
-                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionBottom) {
-                        activeSectionId = section.id
-                    }
-                })
+                const firstSection = sections[0]
+                const lastSection = sections[sections.length - 1]
+                if (!firstSection || !lastSection) return
+
+                let activeSectionId = ''
+
+                if (window.pageYOffset < firstSection.offsetTop) {
+                    activeSectionId = firstSection.id
+                } else if (window.pageYOffset + window.innerHeight > lastSection.offsetTop + lastSection.offsetHeight) {
+                    activeSectionId = lastSection.id
+                } else {
+                    sections.forEach((section) => {
+                        const sectionTop = section.offsetTop;
+                        const sectionBottom = section.offsetTop + section.offsetHeight
+
+                        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionBottom) {
+                            activeSectionId = section.id
+                        }
+                    })
+                }
+
+                const applyActiveLink = (parent: HTMLElement, activeId: string) => {
+                    const links = parent.querySelectorAll('a')
+
+                    links.forEach((link: HTMLAnchorElement) => {
+                        if (link.href.includes(`#${activeId}`)) {
+                            if (parent.id === 'menu-content') document.getElementById(`li-${link.id}`)?.classList.add('active-link')
+                            else link.classList.add('active-link')
+                        }
+                        else {
+                            if (parent.id === 'menu-content') document.getElementById(`li-${link.id}`)?.classList.remove('active-link')
+                            else link.classList.remove('active-link')
+                        }
+                    })
+                }
+
+                applyActiveLink(header, activeSectionId)
+                if (menuContainer) applyActiveLink(menuContent, activeSectionId)
+                // applyActiveLink(footer, activeSectionId)
+            } else if (router === '/projects') {
+                document.getElementById(`h-Projetos`)?.classList.add('active-link')
+                if (menuContainer) document.getElementById(`a-Projetos`)?.classList.add('active-link')
             }
-
-            const applyActiveLink = (parent: HTMLElement, activeId: string) => {
-                const links = parent.querySelectorAll('a')
-
-                links.forEach((link: HTMLAnchorElement) => {
-                    if (link.href.includes(`#${activeId}`)) {
-                        if (parent.id === 'menu-content') document.getElementById(`li-${link.id}`)?.classList.add('active-link')
-                        else link.classList.add('active-link')
-                    }
-                    else {
-                        if (parent.id === 'menu-content') document.getElementById(`li-${link.id}`)?.classList.remove('active-link')
-                        else link.classList.remove('active-link')
-                    }
-                })
-            }
-
-            applyActiveLink(document.getElementById('navigation-header') as HTMLElement, activeSectionId)
-            if (document.getElementById('menu-container')) {
-                applyActiveLink(document.getElementById('menu-content') as HTMLElement, activeSectionId)
-            }
-            // applyActiveLink(document.getElementById('navigation-footer') as HTMLElement, activeSectionId)
         }
 
         handleScroll()
         window.addEventListener('scroll', handleScroll)
 
         return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+    }, [router])
 
     return (
         <header>
@@ -83,7 +101,7 @@ export const Header = () => {
                     <ul className='flex gap-4 xl:gap-8 2xl:gap-10'>
                         { headerLinks.map((menuRouter, index) =>
                             <li key={`${index}-header`} className='my-auto'>
-                                <Link href={menuRouter.href} className='text-lg lg:text-xl text-nowrap hover:underline underline-offset-4'>
+                                <Link id={`h-${menuRouter.name}`}  href={menuRouter.href} className='text-lg lg:text-xl text-nowrap hover:underline underline-offset-4'>
                                     {menuRouter.name}
                                 </Link>
                             </li>

@@ -3,6 +3,9 @@ import type {
     Metadata
 } from 'next'
 
+import { Header } from '@components/header'
+import { Footer } from '@components/footer'
+
 import { rootUrl } from '@PeachCodeData'
 import { NotoSans } from './fonts'
 
@@ -15,7 +18,7 @@ export const viewport: Viewport = {
 }
 export const metadata: Metadata = {
     title: 'PeachCode',
-    description: 'PeachCode ...',
+    description: 'A Peach Code, empresa de consultoria em TI com vasta experiência, oferece soluções inovadoras e personalizadas para as necessidades do mercado atual. Nossa equipe altamente qualificada está comprometida em superar expectativas e elevar o padrão da indústria.',
     metadataBase: new URL(rootUrl),
     openGraph: {
         siteName: 'PeachCode',
@@ -36,14 +39,9 @@ export const metadata: Metadata = {
         statusBarStyle: 'default',
         capable: true
     },
-    /* verification: {
-        google: 'OjYiqlxK6******',
-        yandex: '94b9dc01e******',
-        other: {
-            'msvalidate.01': '9AD4802CE3C4******',
-            // 'facebook-domain-verification': '__DATA__'
-        }
-    },*/
+    verification: {
+        google: 'OjYiqlxK64Fx5dZre97pwHGJ7pYgOP4vQYH1UCOdBuo'
+    },
     icons: {
         icon: [
             {
@@ -51,24 +49,24 @@ export const metadata: Metadata = {
                 type: 'image/x-icon'
             },
             {
-                url: '/favicon-16x16.png',
+                url: '/favicon-16x16.webp',
                 sizes: '16x16',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/favicon-32x32.png',
+                url: '/favicon-32x32.webp',
                 sizes: '32x32',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/favicon-96x96.png',
+                url: '/favicon-96x96.webp',
                 sizes: '96x96',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/favicon-192x192.png',
+                url: '/favicon-192x192.webp',
                 sizes: '192x192',
-                type: 'image/png'
+                type: 'image/webp'
             }
         ],
         shortcut: [
@@ -79,49 +77,49 @@ export const metadata: Metadata = {
         ],
         apple: [
             {
-                url: '/apple-icon-57x57.png',
+                url: '/apple-icon-57x57.webp',
                 sizes: '57x57',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/apple-icon-60x60.png',
+                url: '/apple-icon-60x60.webp',
                 sizes: '60x60',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/apple-icon-72x72.png',
+                url: '/apple-icon-72x72.webp',
                 sizes: '72x72',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/apple-icon-76x76.png',
+                url: '/apple-icon-76x76.webp',
                 sizes: '76x76',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/apple-icon-114x114.png',
+                url: '/apple-icon-114x114.webp',
                 sizes: '114x114',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/apple-icon-120x120.png',
+                url: '/apple-icon-120x120.webp',
                 sizes: '120x120',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/apple-icon-144x144.png',
+                url: '/apple-icon-144x144.webp',
                 sizes: '144x144',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/apple-icon-152x152.png',
+                url: '/apple-icon-152x152.webp',
                 sizes: '152x152',
-                type: 'image/png'
+                type: 'image/webp'
             },
             {
-                url: '/apple-icon-180x180.png',
+                url: '/apple-icon-180x180.webp',
                 sizes: '180x180',
-                type: 'image/png'
+                type: 'image/webp'
             }
         ]
     }
@@ -136,7 +134,9 @@ export default function RootLayout({
     return (
         <html lang='pt-BR'>
             <body className={NotoSans.className} suppressHydrationWarning={suppressHydrationWarning}>
+                <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     )
